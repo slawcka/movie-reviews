@@ -1,0 +1,65 @@
+.hero__form{
+    .rating-text{
+        font-weight: 700;
+        font-size: 3.5rem;
+        color:rgba(243, 243, 243, 0.658);
+        bottom:-2rem;
+        right: 6rem
+    }
+}
+.review{
+    box-shadow: 0px -1px 20px -6px rgba(0,0,0,0.4);
+    min-height: 100%;
+    &__modal{
+      width: 100%;  
+      height: 100%;
+      top:0;
+      background:rgba(0, 0, 0, 0.562);
+      textarea{
+          width: 100%;
+          height:30%;
+      }
+    }
+}
+.btn:focus,textarea,input{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+// star ratings
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    line-height: 1.2em;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
