@@ -4,7 +4,7 @@ const cors=require('cors')
 const app=express()
 const mysql=require('mysql')
 const path = require('path');
-const port=8080
+const port=5000
 
 const db=mysql.createPool({
     host:"sql11.freesqldatabase.com",
